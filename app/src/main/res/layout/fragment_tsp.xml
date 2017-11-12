@@ -33,6 +33,7 @@
                     android:layout_height="wrap_content"
                     android:text="FECHA DE ENTRADA:"/>
                 <Button
+                    android:id="@+id/btn_fechaEntrada"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Seleccionar fecha"/>
@@ -168,10 +169,11 @@
                     android:layout_height="wrap_content"
                     android:text="FECHA DESEADA:"/>
 
-                <EditText
-                    android:id="@+id/modeloMotor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                <Button
+                    android:id="@+id/btn_fechaDeseada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar fecha"/>>
 
             </LinearLayout>
             <LinearLayout
@@ -184,10 +186,11 @@
                     android:layout_height="wrap_content"
                     android:text="FECHA REAL:"/>
 
-                <EditText
-                    android:id="@+id/numEconomico"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                <Button
+                    android:id="@+id/btn_fechaReal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Seleccionar fecha"/>>
             </LinearLayout>
         </LinearLayout>
     </FrameLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/tsl_item"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="T.S.L." />
+
+        <item
+            android:id="@+id/tsp_item"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="T.S.P." />
+
+        <item
+            android:id="@+id/rem_item"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="REM" />
+        <item
+            android:id="@+id/noticias_item"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Noticias" />
+
+        <item
+            android:id="@+id/compras_item"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Compras" />
+    </group>
+<!--
+    <item android:title="">
+        <menu>
+            <item
+                android:id="@+id/acercade_item2"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Acerca de" />
+        </menu>
+    </item>
+
+-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/acercade_item"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Acerca de"
+            />
+    </group>
+</menu>

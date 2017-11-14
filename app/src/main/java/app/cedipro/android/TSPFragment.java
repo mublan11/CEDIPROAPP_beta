@@ -22,6 +22,7 @@ import java.util.Calendar;
 
 public class TSPFragment extends Fragment implements View.OnClickListener {
     private EditText fechaEntrada, fechaDeseada, fechaReal;
+    private Button btnEnviar, btnCancelar;
     private View view;
     private int year, month, day;
     static final int  DIALOG_ID = 0;
@@ -49,6 +50,11 @@ public class TSPFragment extends Fragment implements View.OnClickListener {
         fechaReal =  (EditText) view.findViewById(R.id.fechaReal);
         fechaReal.setKeyListener(null);
         fechaReal.setOnClickListener(this);
+
+        btnEnviar = (Button) view.findViewById(R.id.btnEnviar);
+        btnEnviar.setOnClickListener(this);
+        btnCancelar = (Button) view.findViewById(R.id.btnCancelar);
+        btnCancelar.setOnClickListener(this);
     }
 
     @Override
@@ -62,6 +68,22 @@ public class TSPFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.fechaReal:
                 showDatePickerDialog(fechaReal);
+                break;
+            case R.id.btnEnviar:
+                Toast.makeText(getContext(), "Registro enviado con éxito", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.btnCancelar:
+                fechaEntrada.getText().clear();
+                fechaReal.getText().clear();
+                fechaDeseada.getText().clear();
+                /*ViewGroup group = (ViewGroup)view.findViewById(R.id.layout_formulario_tsp);
+                for (int i = 0, count = group.getChildCount(); i < count; ++i) {
+                    View view2 = group.getChildAt(i);
+                    if (view2 instanceof EditText) {
+                        ((EditText)view2).setText("");
+                    }
+                }*/
+                Toast.makeText(getContext(), "Registro cancelado", Toast.LENGTH_SHORT).show();
                 break;
         }
     }
@@ -81,9 +103,10 @@ public class TSPFragment extends Fragment implements View.OnClickListener {
 
                 editText.setText(selectedDate);
                 //se deseada cambiar la anchura del edittext despues de ingresar la fecha
+                /*
                 ViewGroup.LayoutParams params = editText.getLayoutParams();
                 params.width = ViewGroup.LayoutParams.WRAP_CONTENT;
-                editText.setLayoutParams(params);
+                editText.setLayoutParams(params);*/
                 Toast.makeText(getContext(), "Fecha seleccionada: "+selectedDate, Toast.LENGTH_LONG).show();
             }
         });

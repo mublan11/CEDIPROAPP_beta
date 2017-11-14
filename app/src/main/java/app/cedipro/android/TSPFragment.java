@@ -41,6 +41,7 @@ public class TSPFragment extends Fragment implements View.OnClickListener {
         fechaEntrada.setKeyListener(null);
         //fechaEntrada.setOnTouchListener(this);
         fechaEntrada.setOnClickListener(this);
+        
 
         fechaDeseada =  (EditText) view.findViewById(R.id.fechaDeseada);
         fechaDeseada.setKeyListener(null);

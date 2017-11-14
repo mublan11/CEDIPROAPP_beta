@@ -10,6 +10,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -41,7 +42,6 @@ public class TSPFragment extends Fragment implements View.OnClickListener {
         fechaEntrada.setKeyListener(null);
         //fechaEntrada.setOnTouchListener(this);
         fechaEntrada.setOnClickListener(this);
-        
 
         fechaDeseada =  (EditText) view.findViewById(R.id.fechaDeseada);
         fechaDeseada.setKeyListener(null);

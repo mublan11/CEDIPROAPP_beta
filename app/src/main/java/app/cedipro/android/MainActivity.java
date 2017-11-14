@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         FragmentManager fragmentManager =  getSupportFragmentManager();
-        fragmentManager.beginTransaction().replace(R.id.contenedor, new TSPFragment()).commit();
-        getSupportActionBar().setTitle("T.S.P.");
+        fragmentManager.beginTransaction().replace(R.id.contenedor, new TSLFragment()).commit();
+        getSupportActionBar().setTitle("T.S.L.");
     }
 
     @Override

@@ -25,9 +25,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Formulario para registro de camiones"
+                android:textAllCaps="true"
                 android:layout_gravity="center"
                 android:textStyle="bold"
-                android:textSize="18dp"/>
+                android:textSize="15dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,7 +44,7 @@
 
                     <EditText
                         android:id="@+id/fechaEntrada"
-                        android:hint="FECHA ENTRADA"
+                        android:hint="Fecha de entrada"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         />
@@ -64,7 +65,7 @@
 
                     <EditText
                         android:id="@+id/folio_ot"
-                        android:hint="FOLIO O.T."
+                        android:hint="Folio o.t."
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
                 </android.support.design.widget.TextInputLayout>
@@ -81,7 +82,7 @@
 
                     <EditText
                         android:id="@+id/marca_unidad"
-                        android:hint="MARCA DE UNIDAD"
+                        android:hint="Marca de unidad"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -100,7 +101,7 @@
 
                     <EditText
                         android:id="@+id/num_economico"
-                        android:hint="No. ECONOMICO"
+                        android:hint="No. económico"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
@@ -110,28 +111,33 @@
             </LinearLayout>
 
             <TextView
-
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Descripción de actividad"
                 android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="18dp"
+                android:paddingTop="15dp"
+                android:gravity="left"
+                android:textSize="14dp"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="MECÁNICA:"/>
-
-                <EditText
-                    android:id="@+id/modelo"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_des_mecanica"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp">
+
+                    <EditText
+                        android:id="@+id/des_mecanica"
+                        android:hint="Mecánica"
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -139,15 +145,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ELECTRICA:"/>
-
-                <EditText
-                    android:id="@+id/CPL_arreglo"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_des_electrica"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/des_electrica"
+                        android:hint="Eléctrica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -155,15 +164,18 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="PAILERIA:"/>
-
-                <EditText
-                    android:id="@+id/NumSerie"
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_des_paileria"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/des_paileria"
+                        android:hint="Pailería"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -171,17 +183,19 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FECHA DESEADA:"/>
-
-                <EditText
-                    android:id="@+id/fechaDeseada"
-
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_fecha_deseada"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/fechaDeseada"
+                        android:hint="Fecha deseada"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
 
             </LinearLayout>
             <LinearLayout
@@ -189,17 +203,17 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="FECHA REAL:"/>
-
-                <EditText
-                    android:id="@+id/fechaReal"
-
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_fecha_real"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
+                    android:layout_height="wrap_content">
+
+                    <EditText
+                        android:id="@+id/fechaReal"
+                        android:hint="Fecha real"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+                </android.support.design.widget.TextInputLayout>
             </LinearLayout>
             <LinearLayout
                 android:id="@+id/BarraBotones"
@@ -215,6 +229,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Enviar"
+
                     style="?android:attr/buttonBarStyle"
                     android:background="#18bc29"/>
 
@@ -223,6 +238,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="Cancelar"
+
+                    android:layout_marginLeft="10dp"
                     style="?android:attr/buttonBarStyle"
                     android:background="#bc1818"/>
 
